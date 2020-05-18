@@ -7,21 +7,23 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: chartreuse;
+  background-color: #fee2b3;
   height: 100vh;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  width: 350px;
+  width: 380px;
   align-self: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: blue;
+  color: white;
+  font-weight: bold;
+  background-color: #562349;
   margin: 100px;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 10px 10px red;
+  box-shadow: 10px 10px 10px #ad6989;
 }
 
 .inputField {
@@ -30,14 +32,29 @@ form {
 }
 
 label {
+  margin: auto;
   width: 50%;
+  height: 20px;
 }
 
 input {
   width: 50%;
   background-color: transparent;
-  border: 4px solid #8842d5;
+  border: 4px solid #ad6989;
   border-radius: 5px;
+  height: 20px;
+  color: white;
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+input:hover {
+  border: 4px solid #fee2b3;
+  transition: 0.2s;
+}
+
+input:focus {
+  color: white;
 }
 
 button {
@@ -46,4 +63,16 @@ button {
   align-self: center;
   padding: 5px 20px;
   border-radius: 5px;
+  background-color: #ad6989;
+  border-color: transparent;
+  color: white;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #fee2b3;
+  transition: 0.2s;
 }
