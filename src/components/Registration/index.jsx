@@ -3,7 +3,26 @@ import useSignUpForm from "../Hooks";
 import "./Registration.css";
 
 const Registration = () => {
-  const { inputs, handleInputChange, handleSubmit } = useSignUpForm();
+  const signup = () => {
+    alert(`UserCreated! Name: ${inputs.name} Email: ${inputs.email}`);
+  };
+
+  const { inputs, handleInputChange, handleSubmit } = useSignUpForm(
+    {
+      name: "",
+      email: "",
+      passwordOne: "",
+      passwordTwo: "",
+    },
+    signup
+  );
+  // password validation attempt ?????????????????
+  // const passwordOne = inputs.passwordOne;
+  // const passwordTwo = inputs.passwordTwo;
+  // const passwordCheck = () => {
+  //   passwordOne === passwordTwo ? "" : alert("Passwords don't match");
+  //      }
+
   return (
     <form onSubmit={handleSubmit}>
       <div className="container">
